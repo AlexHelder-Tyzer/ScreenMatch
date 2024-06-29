@@ -21,7 +21,7 @@ public class Principal {
     private ConsumoAPI consumoApi = new ConsumoAPI();
 
     private final String API_BASE = "https://www.omdbapi.com/?t=";
-    private final String API_KEY = "&apikey=4966728d";
+    private final String API_KEY = System.getenv().get("OMDB_API"); //usando variables de entorno
     private ConvierteDatos conversor = new ConvierteDatos();
 
     public void muestraElMenu(){
